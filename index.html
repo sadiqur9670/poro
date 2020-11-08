@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Poro</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
+		<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://kit.fontawesome.com/ff98f0f708.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="navigation">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="sidebar">
+							<div class="logo"><a href="#" title=""><i class="fas fa-book" style="padding: 20px;"></i></a>পড়ো
+							<nav class="sidebar-menu">
+								<ul>
+									<li class="active"><a href="#"><i class="fas fa-home fixed" style="padding: 10px;"></i>হোম</a></li>
+									<li>
+										<a href="#" class="feat-btn"><i class="fas fa-book-open fixed" style="padding: 10px;"></i>গ্রন্থাগার
+											<span class="fas fa-caret-down first"></span>
+										</a>
+										<ul class="feat-show">
+											<li><a href="#">স্কুল</a></li>
+											<li><a href="#">কলেজ</a></li>
+											<li><a href="#">বিশ্ববিদ্যালয়</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="serv-btn"><i class="fas fa-bookmark fixed" style="padding: 10px;"></i>বুকমার্ক
+											<span class="fas fa-caret-down second"></span>
+										</a>
+										<ul class="serv-show">
+											<li><a href="#">বুকমার্ক</a></li>
+											<li><a href="#">বুকমার্ক</a></li>
+										</ul>
+									</li>
+									<li><a href="#"><i class="fas fa-pen fixed" style="padding: 10px;"></i>রিভিউ</a></li>
+									<li><a href="#"><i class="fas fa-shopping-bag fixed" style="padding: 10px;"></i>দোকান</a></li>
+								</ul>
+							</nav>
+							<script>
+							$('.btn').click(function(){
+							$(this).toggleClass("click");
+							$('.sidebar').toggleClass("show");
+							});
+							$('.feat-btn').click(function(){
+							$('nav ul .feat-show').toggleClass("show");
+							$('nav ul .first').toggleClass("rotate");
+							});
+							$('.serv-btn').click(function(){
+							$('nav ul .serv-show').toggleClass("show1");
+							$('nav ul .second').toggleClass("rotate");
+							});
+							$('nav ul li').click(function(){
+							$(this).addClass("active").siblings().removeClass("active");
+							});
+							</script>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="col-md-9">
+					<div class="contenar">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="searchbar">
+									<input class="search_input" type="text" name="" placeholder="পছন্দের বইটি খুঁজে নাও...">
+									<a href="#" class="search_icon"><i class="fas fa-search"style="margin-top: -40px;"></i></a>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-primary">বই যুক্ত করুন</button>
+							</div>
+							<div class="col-md-4">
+								<i class="far fa-user-circle fa-2x" style="margin: 42px 10px;"></i>
+								<div class="btn-group">
+									<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: white;
+									color: gray;
+									border: none;
+									margin-top: -20px;">
+									Sufi Ahmed Hamim
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">প্রফাইল</a>
+										<a class="dropdown-item" href="#">বই ‍অ্যাড</a>
+										<a class="dropdown-item" href="#">পত্রিকা</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">লগ আউট</a>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="contenar">
+						<div class="row">
+							<div class="col-md-5 card" id="new-book"style="margin: 20px;height: 150px;">
+								<div class="row">
+									<div class="col-md-6">
+										<h2 style="color: white;">স্বাগতম বইসমুহ দেখুন</h2>
+									</div>
+									<div class="col-md-6">
+										<img src="img/logo.png" alt="" style="width: 100px; height: 100px;">
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="col-md-5 card" id="university-book" style="margin: 20px;height: 150px;">
+								<div class="row">
+									<div class="col-md-6">
+										<h2 style="color: white;">বিশ্ব বিদ্যালয়ের বইসমুহ দেখুন</h2>
+									</div>
+									<div class="col-md-6">
+										<img src="img/logo.png" alt="" style="width: 100px; height: 100px;">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contenar">
+						<div class="row">
+							<p>আমার বই</p>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book1.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book2.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book3.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book4.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book1.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book2.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book3.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+							<div class="col-md-2 card" style="background: #F8F9C3;margin: 2px;text-decoration: none;">
+								<div class="book">
+									<a href="#" title=""><img src="img/book4.jpg" alt="" style="height: 200px; margin: 5px;"></a>
+								</div>
+								<div class="detail">
+									<h6 >Book name</h6>
+									<p>Writer</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+	</body>
+</html>
